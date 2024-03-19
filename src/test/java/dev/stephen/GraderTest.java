@@ -42,16 +42,12 @@ class GraderTest {
     @Test
     void negativeThrowsIllegalException(){
         var grader = new Grader();
-        assertThrows(IllegalArgumentException.class, () -> {
-            grader.determineGrade(-1);
-        });
+        assertThrows(IllegalArgumentException.class, () -> grader.determineGrade(-1));
     }
     @Test
     void overHundredThrowsIllegalException(){
         var grader = new Grader();
-        assertThrows(IllegalArgumentException.class, () -> {
-            grader.determineGrade(1000);
-        });
+        assertThrows(IllegalArgumentException.class, () -> grader.determineGrade(1000));
     }
 
 }
